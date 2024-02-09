@@ -1,0 +1,13 @@
+﻿@using Umbraco.Extensions
+@using Umbraco.Cms.Core.Models
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockGridItem>
+
+<div style="background-color: white; margin-top: 20px;">
+    @{
+        var link = Model.Content.Value<Umbraco.Cms.Core.Models.Link>("blogLink");
+        if (link != null)
+        {
+            <a href="@link.Url" target="@link.Target">@link.Name</a>
+        }
+    }
+</div>

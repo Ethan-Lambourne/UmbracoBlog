@@ -1,0 +1,18 @@
+﻿@using Umbraco.Cms.Web.Common.PublishedModels;
+@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<ContentModels.BlogPage>
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+	Layout = "Master.cshtml";
+}
+
+<html>
+    <body>
+        
+        @* <h2>@Request.QueryString["title"]</h2>
+        <p>@Request.QueryString["description"]<p/>
+        <p>@Request.QueryString["detail"]<p/> *@
+
+        <p>@Model.Value("title")</p>
+        
+    </body>
+</html>
